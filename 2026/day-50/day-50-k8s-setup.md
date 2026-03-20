@@ -24,32 +24,5 @@ Task 2: Kubernetes Architecture
 Kubernetes has two sides — the Control Plane (the brain) and the Worker Nodes (the muscle). The Control Plane decides what should happen. The Worker Nodes make it happen.
 
 
-┌──────────────────────────────────────────────────────────────┐
-│                       CONTROL PLANE                          │
-│                                                              │
-│   ┌──────────────────────────────────────────────────────┐   │
-│   │                    API Server                        │   │
-│   │      Every single command goes through this          │   │
-│   └──────────────────────────────────────────────────────┘   │
-│          │               │                  │                │
-│   ┌──────▼─────┐  ┌──────▼─────┐  ┌─────────▼──────────┐    │
-│   │    etcd    │  │ Scheduler  │  │ Controller Manager  │    │
-│   │ cluster DB │  │ node picker│  │  reconciles state   │    │
-│   └────────────┘  └────────────┘  └────────────────────┘    │
-└──────────────────────────────────────────────────────────────┘
-                           │
-           ┌───────────────▼──────────────────┐
-           │           WORKER NODE            │
-           │                                  │
-           │  ┌────────────────────────────┐  │
-           │  │          kubelet           │  │
-           │  │  node agent — manages pods │  │
-           │  └────────────────────────────┘  │
-           │  ┌─────────────┐ ┌────────────┐  │
-           │  │ kube-proxy  │ │ Container  │  │
-           │  │ networking  │ │  Runtime   │  │
-           │  └─────────────┘ └────────────┘  │
-           │  ┌──────────┐  ┌──────────┐      │
-           │  │  Pod A   │  │  Pod B   │      │
-           │  └──────────┘  └──────────┘      │
-           └──────────────────────────────────┘
+
+          
