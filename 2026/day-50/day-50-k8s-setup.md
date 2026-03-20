@@ -24,5 +24,14 @@ Task 2: Kubernetes Architecture
 Kubernetes has two sides — the Control Plane (the brain) and the Worker Nodes (the muscle). The Control Plane decides what should happen. The Worker Nodes make it happen.
 
 
+Control Plane (Master Node):
+API Server — the front door to the cluster, every command goes through it
+etcd — the database that stores all cluster state
+Scheduler — decides which node a new pod should run on
+Controller Manager — watches the cluster and makes sure the desired state matches reality
 
+Worker Node:
+kubelet — the agent on each node that talks to the API server and manages pods
+kube-proxy — handles networking rules so pods can communicate
+Container Runtime — the engine that actually runs containers (containerd, CRI-O)
           
