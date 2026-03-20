@@ -23,6 +23,7 @@ The name Kubernetes originates from Greek, meaning helmsman or pilot. K8s as an 
 Task 2: Kubernetes Architecture
 Kubernetes has two sides — the Control Plane (the brain) and the Worker Nodes (the muscle). The Control Plane decides what should happen. The Worker Nodes make it happen.
 
+
 ┌──────────────────────────────────────────────────────────────┐
 │                       CONTROL PLANE                          │
 │                                                              │
