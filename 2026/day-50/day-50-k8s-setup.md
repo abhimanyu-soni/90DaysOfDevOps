@@ -25,6 +25,7 @@ Kubernetes has two sides — the Control Plane (the brain) and the Worker Nodes 
 
 
 Control Plane (Master Node):
+
 API Server — the front door to the cluster, every command goes through it
 etcd — the database that stores all cluster state
 Scheduler — decides which node a new pod should run on
